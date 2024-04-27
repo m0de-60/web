@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Super-DuckHunt Help & Resources
+    </title>
+    <style>
+    .bold {
+        font-weight: bold;
+    }
+    .norm {
+        font-weight: normal;
+    }
+
+    </style>
+    <style type="text/css">
+    .scroller {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    padding: 10px
+    <!-- border: 1px solid; -->
+
+    }
+    </style>
+    <style>
+a:link {
+    color: #55CDEE;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #55CDEE;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF789A;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #55CDEE;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+    </head>
+    <body>
+<body style="background-color:#000000;">
+<span style="font-family: courier, monospace;">
+<span style="font-size: 11pt">
+<span style="color:#CBCBCB">
+
+<p align='center'><img src='https://github.com/Neo-Coder-usa/super-duckhunt-web/blob/main/super-duckhunt-img.png?raw=true'></p>
+<p align='center'>
+    <span style="color:#EF1212">
+    <b>version 1.1.0 to 1.1.3-2 OPERATOR'S GUIDE</b>
+    <br>
+    [Python Version for Win/Linux/Mac/EggDrop]
+    </span>
+</p>
+<table border=1 height="100%" width="100%" cellspacing="5">
+    <tr>
+    <td Width="20%">
+    <p class="normal" align='center'>
+    <span style="color:#00AA00"><b>INDEX</b></span><br>
+    <br>
+    <a href="super-duckhunt-help.htm">Return to Main Page</a>
+    </p>
+    <p align='left'>
+        1: <a href=duckhunt1-1-0-operators-guide.htm#setting-up-the-bot>Setting up the bot</a><br>
+        2: <a href=duckhunt1-1-0-operators-guide.htm#configuration>Configuration</a><br>
+        3: <a href=duckhunt1-1-0-operators-guide.htm#bot-maint-and-reset>Bot Maintenance and Reset Functions</a><br>
+        4: <a href=duckhunt1-1-0-operators-guide.htm#botmaster-admin-commands>Botmaster and Admin Commands</a><br>
+    <p align=center>
+    <span style="color:#00AA00"><b>HELP ARTICLES</b></span>
+    </p>
+    1: Basic Commands
+    <br>
+    2: How The Game Works
+    <br>
+    3: Shopping For Items
+    <br>
+    4: Gun Info, Stats & Upgrades
+    <br>
+    5: Viewing Your Stats
+    <br>
+    6: In Game "Rules & Regulations"
+    <br>
+    <p align=center>
+    <span style="color:#00AA00"><b>RESOURCES</b></span>
+    </p>
+    1: <a href="https://github.com/Neo-Coder-usa/super-duckhunt-beta/blob/main/LICENSE">GNU License Information</a>
+    <br>
+    2: Source Code (COMING SOON)
+    <br>
+    3: Modifier's Guide (COMING SOON)
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    </p>
+    </td>
+    <td Width=80% >
+        <div class='scroller'>
+<p align='left'>
+        <span style="color:#DD8800"><b>
+            <span style="font-size: 13pt">
+                <a name='setting-up-the-bot'></a>
+        --------------------------------------------------------------<br>
+        1. Setting up the bot<br>
+        --------------------------------------------------------------<br>
+            </span>
+        </b></span>
+    <span style="font-size: 10pt">
+    <ul>
+        <span style="color:#DD1111"><b>This bot requires <a href="https://www.python.org/downloads/release/python-3120/">Python version 3.12.0</a> to be installed on the running machine.</b></span><br>
+        <br>
+        <span style="color:#DD8800"><b>Anytime you wish to change the bot's username, password, server, port or channel, it must be done manually following this process.</b></span><br>
+        <br>
+        <li align='left'>If you're setting up, place all files in the same folder. <br> REQUIRED FILES: <a href="https://github.com/Neo-Coder-usa/super-duckhunt-beta">main.py bot.py func.py duckhunt.cnf</a></li>
+        <br>
+        <li align='left'>Don't run the bot yet. (Shut it down, if it is running)</li>
+        <br>
+        <li align='left'>Open duckhunt.cnf with a text editor</li>
+        <ul align='left'>
+            <br>
+            <li align='left'><span style="color:#DD8800"><b>At the top, under section [duckhunt]</b></span></li>
+            <li align='left'><span style="color:#DD1111">" server = "</span> input the server being used.</li>
+            <li align='left'><span style="color:#DD1111">" port = "</span> For regular connection input 6667 (Version 1.1.0 to 1.1.3), for SSL use 6697 (Version 1.1.32+)</li>
+            <li align='left'><span style="color:#DD1111">" botname = DuckHunt "</span>can be DuckHunt or whatever you choose (case sensative)</li>
+            <li align='left'><span style="color:#DD1111"> " botpass = 0 "</span> is optional, set as 0 if not used. (case sensative)</li>
+            <li align='left'><span style="color:#DD1111">" duckchan = #duckhunt "</span> is the bot channel. NO CAPS MUST BE ALL LOWER CASE: #channel. duckchan can be #duckhunt or whatever you choose. 1 CHANNEL ONLY</li>
+            <li align='left'><span style="color:#DD1111">" botmaster = YourUsername "</span> this gives you full bot master control of the bot. REQUIRED.</li>
+            <li align='left'><span style="color:#DD1111">" admin = 0 "</span> to clear admin list. Leave as 0 do not manually input admins.</li>
+            <li align='left'><span style="color:#DD1111">" botignore = 0 "</span> to clear ignore list. Leave as 0 do not manually input ignores.</li>
+            <li align='left'><span style="color:#DD1111">" serverssl = "</span> (Version 1.1.32+) 'off' if using port non-SSL, 'on' if using SSL (see SSL Option below)
+
+            <br>[duckhunt]<br>
+            server = irc.yourservername.net<br>
+            port = 6667<br>
+            botname = DuckHunt<br>
+            botpass = password<br>
+            duckchan = #duckhunt<br>
+            botmaster = YourUsername<br>
+            admin = 0<br>
+            ignore = 0<br>
+            serverssl = off
+            <br>
+            <br>
+            <a name='ssl-config'></a>
+            <span style="color:#DD8800">SSL Option v1.1.3-2+</span><br>
+            <br>
+            Versions 1.1.3-2 and higher can connect to IRC networks that support SSL/TLS! If you are using versions 1.1.0 to 1.1.3 SSL option is NOT AVAILABLE.
+            <br>
+            If you wish to use SSL, in duckhunt.cnf (described above), in [duckhunt] use port = 6697, and add/set serverssl = on<br>
+            <br>[duckhunt]<br>
+            ...
+            <br>
+            port = 6697<br>
+            ...
+            <br>
+            serverssl = on<br>
+            <br>
+            <br>
+            <b>Do not manually alter any other settings in the file.</b> The bot has built in configuration commands. (See configuration). The above list of items may not appear in the same order in duckhunt.cnf. Check only section [duckhunt]
+            for these items. More information on duckhunt.cnf will be available in the up coming Modifier's Guide.
+        </ul><br>
+        <li align='left'>Save duckhunt.cnf and close the file.</li>
+        <br>
+        The bot is now ready. It can be run on Windows, Linux or Eggdrop.<br>
+        <br>
+          <span style="color:#DD1111"><b>Run the bot from main.py</b></span><br>
+            </ul>
+                <span style="color:#DD8800"><b>
+            <span style="font-size: 13pt">
+                <a name='configuration'></a>
+        --------------------------------------------------------------<br>
+        2. Configuration<br>
+        --------------------------------------------------------------<br>
+            </span>
+        </b></span>
+        <ul>
+        <span style="color:#DD1111">This bot comes pre-configured with a default configuration. Once you have completed Section 1,(<a href=duckhunt1-1-0-operators-guide.htm#setting-up-the-bot>Setting up the bot</a>), the bot is ready to go and will begin its process once it joins the specified server and chat.</span><br>
+        <br>
+        DuckHunt is pre-configured to have the game enabled from start up. To turn DuckHunt on or off, in chat use <span style="color:#DD1111"><b>!duckhunt on</b></span> or <span style="color:#DD1111"><b>!duckhunt off</b></span><br>
+        <br>
+        <span style="color:#DD1111"><b>FURTHER CONFIGURATION IS USER DEFINED.</b></span> Below you can find a description of the pre-configured default settings, and how to change them. (Advanced users)<br>
+        <br>
+        <span style="color:#DD1111"><b>If you need to restore your duckhunt.cnf to pre-configuration settings</span> please view the <a href=duckhunt1-1-0-operators-guide#bot-maint-and-reset>Bot Maintenance and Reset Functions</a>.<br>
+    <br>
+    This bot has the ability to change the configuration and settings live, while the bot is running. There is no need to configure or change settings of this bot thru duckhunt.cnf file,
+    and the bot will not need to be restarted. All changes take effect immediately.<br>
+    <br>
+    <a name='configuration-explanation'></a>
+    <span style="color:#DD8800"><b>[Configuration Explanation]</b></span><br>
+    <br>
+    The configuration commands can only be used by botmasters. The configuration of this bot is stored in the duckhunt.cnf file. This bot has the capability to make live changes to its configuration, and making the changes take effect quickly, if not immediately. More information on duckhunt.cnf will be available in the Modifier's Guide<br>
+    <br>
+    Everything works based on time, random numbers and percentages that are set within a specified range. The various values and settings that can be configured in this bot allow each botmaster to fine tune their DuckHunt bots for their chats.<br>
+    <br>
+    <span style="color:#DD1111"><b>PLEASE NOTE:</b></span> <span style="color:#DD8800">The <a href="super-duckhunt-help.htm">Help Documentation</a> is designed to follow the stock (or pre-configured) settings. Making your own changes may cause game experience to change, based on the settings you declare. Some commands or game situations may be enabled or disabled per botmaster definition.</span><br>
+    <br>
+    <a name='core-configuration'></a>
+    <span style="color:#DD8800"><b>[Core Configuration]</b></span><br>
+    <br>
+    Core configuration values are: <a href="duckhunt1-1-0-operators-guide.htm#maxducks">maxducks</a>, <a href="duckhunt1-1-0-operators-guide.htm#spawntime">spawntime</a>, <a href="duckhunt1-1-0-operators-guide.htm#flytime">flytime</a>, <a href="duckhunt1-1-0-operators-guide.htm#duckexp">duckexp</a>,
+    <a href="duckhunt1-1-0-operators-guide.htm#duckfear">duckfear</a>, <a href="duckhunt1-1-0-operators-guide.htm#duckgold">duckgold</a>, <a href="duckhunt1-1-0-operators-guide.htm#friendrate">friendrate</a><br>
+    <br>
+    The following commands will change these values. (Pre-configured values listed)<br>
+    <br>
+    <ul>
+         <a name='maxducks'></a>
+        <span style="color:#DD8800"><b>maxducks</b></span><br>
+        <br>
+        <li><span style="color:#FFFFFF"><b>/msg botname set maxducks X</b></span></li>
+        <br>
+        maxducks is the maximum amount of ducks that can exist at once; Recommend 3-6.<br>
+        Pre-config: 6<br>
+        <br>
+         <a name='spawntime'></a>
+         <span style="color:#DD8800"><b>spawntime</b></span><br>
+         <br>
+         <li><span style="color:#FFFFFF"><b>/msg botname set spawntime X</b></span></li>
+    <br>
+         spawntime is the amount of time for a duck to spawn automatically in chat. This setting can also help fine tune flood controls. If you wish to have multiple ducks spawn automatically, set this value lower than <a href="duckhunt1-1-0-operators-guide.htm#flytime">flytime</a>. Time value is in seconds <br>Recommend 900-1800 seconds (15-30 min)<br>
+         Pre-config: 1800 seconds<br>
+         <br>
+         <a name='flytime'></a>
+    <span style="color:#DD8800"><b>flytime</b></span><br>
+    <br>
+    <li><span style="color:#FFFFFF"><b>/msg botname set flytime X</b></span></li>
+        <br>
+    flytime is the amount of time a duck will stay in the area before flying away. If you wish you have multiple ducks spawn automatically, set this value higher than <a href="duckhunt1-1-0-operators-guide.htm#spawntime">spawntime</a>. The value is in seconds <br>Recommend 600-1500 seconds (10-25 min)<br>
+    Pre-config: 1500 seconds<br>
+    <br>
+    <a name='duckexp'></a>
+       <span style="color:#DD8800"><b>duckexp</b></span><br>
+       <br>
+        <li><span style="color:#FFFFFF"><b>/msg botname set duckexp X</b></span></li>
+        <br>
+        duckexp is the amount of xp a player earns for shooting down a normal duck. Golden ducks are 3x this value. Based on game pricing<br> Recommend 15<br>
+        Pre-config: 15 xp<br>
+        <br>
+        <a name='duckfear'></a>
+     <span style="color:#DD8800"><b>duckfear</b></span><br>
+     <br>
+     <li><span style="color:#FFFFFF"><b>/msg botname set duckfear X</b></span></li>
+     <br>
+     duckfear is based on points accumulation. Points accumulate every time a player uses !bang. This value can also be used for fine tuning flood controls. The lower the value, the easier it is to scare ducks<br> Recommend 45-55<br>
+     Pre-config: 45<br>
+     <br>
+     <a name='duckgold'></a>
+    <span style="color:#DD8800"><b>duckgold</b></span><br>
+    <br>
+    <li><span style="color:#FFFFFF"><b>/msg botname set duckgold X</b></span></li>
+    <br>
+    duckgold is the number that represents what percentage of automatically spawned ducks will turn golden. 1-100<br> Recommend 30-50<br>
+    Pre-config: 40<br>
+    <br>
+    <a name='friendrate'></a>
+    <span style="color:#DD8800"><b>friendrate</b></span><br>
+    <br>
+     <li><span style="color:#FFFFFF"><b>/msg botname set friendrate X</b></span></li>
+     <br>
+     friendrate is the number that represents the percentage of luck players will have befriending ducks. 1-100<br> Recommend 70-75<br>
+     Pre-config: 71<br>
+     <br>
+    </ul>
+    <a name='adding-removing-user-access'></a>
+     <span style="color:#DD8800"><b>[Adding & Removing User Access]</b></span><br>
+     <br>
+     User access consists of Botmasters, Admins and Ignored users. It is recommended to only have one or two botmasters, and the rest as admins, but both botmaster and admin can have multiple users.<br>
+     <br>
+     Only Botmasters may add or remove Admins and other Botmasters. Botmaster and Admin may add or remove ignored users.<br>
+     <br>
+    <ul>
+       <span style="color:#DD8800"><b>Adding or Removing a Botmaster</b></span><br>
+       <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname add botmaster username</b></span></li>
+       <li><span style="color:#FFFFFF"><b>/msg botname del botmaster username</b></span></li><br>
+       <br>
+       There must always be at least one username listed as botmaster at all times.<br>
+       <br>
+        <span style="color:#DD8800"><b>Adding or Removing an Admin</b></span><br>
+        <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname add admin username</b></span></li>
+       <li><span style="color:#FFFFFF"><b>/msg botname del admin username</b></span></li>
+       <br>
+       <span style="color:#DD8800"><b>Adding or Removing Ignored Users</b></span><br>
+       <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname add ignore username</b></span></li>
+       <li><span style="color:#FFFFFF"><b>/msg botname del ignore username</b></span></li>
+       <br>
+       Avoid double entries. Do not list the same user in multiple lists. Botmasters have full access, Admins have limited access.<br>
+    </ul>
+    <br>
+    <a name='configuring-game-rules'></a>
+      <span style="color:#DD8800"><b>[Configuring Game Rules]</b></span><br>
+      <br>
+      The <a href=super-duckhunt-help.htm#in-game-rules-regulations>In-Game Rules and Regulations</a> can be modified to change the game experience for your channel.<br>
+      <br>
+      <ul>
+       <span style="color:#DD8800"><b>Gun Confiscation</b></span><br>
+       <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname rules gunconf on</b></span></li>
+       <li><span style="color:#FFFFFF"><b>/msg botname rules gunconf off</b></span></li>
+       <br>
+       When turned on, if a player has an accident, or fires their gun without a duck in the area, that player's gun is confiscated until the following duck is shot by someone else.
+       The player's gun will be silently returned upon the following duck being successfully shot down. <br>
+       Pre-config: ON<br>
+       <br>
+        <span style="color:#DD8800"><b>Bullet Ricochet</b></span><br>
+        <br>
+                 <li><span style="color:#FFFFFF"><b>/msg botname rules gunricochet 0</b></span><br>
+                 This turns bullet ricochets OFF.</li>
+                 <br>
+                 <li><span style="color:#FFFFFF"><b>/msg botname rules gunricochet X</b></span><br>
+                 This will determine the percentage of a bullet ricocheting when a player misses. 1-100. Recommend 5<br>
+                 </li>
+                 <br>
+                 Gun ricochet is disabled at 0. If enabled, ricochets will result in a player accident. If gun confiscation is on, the player's gun will also be confiscated.<br>
+                 Pre-config: 5<br>
+                 <br>
+       <span style="color:#DD8800"><b>Searching The Bushes</b></span><br>
+       <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname rules thebushes 0</b></span><br>
+       This turns searching the bushes OFF.</li>
+       <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname rules thebushes X</b></span><br>
+       This will determine the percentage of objects found by players when they search the bushes after shooting a duck.</li>
+       <br>
+       Searching the bushes is disabled at 0. If enabled, 1-100% of players will find objects in the bushes after shooting a duck. Recommend 15<br>
+       Pre-config: 15<br>
+       <br>
+       <span style="color:#DD8800"><b>Infinite Ammo</b></span><br>
+       <br>
+       <li><span style="color:#FFFFFF"><b>/msg botname rules infammo on</b></span></li>
+       <li><span style="color:#FFFFFF"><b>/msg botname rules infammo off</b></span></li>
+       <br>
+       When turned on players will have infinite gun magazines, and infinite bread loafs. Players will still need to reload, but will not run out of ammo.<br>
+       Pre-config: OFF<br>
+       <br>
+       <span style="color:#DD8800"><b>No shooting (!bang command set)</b></span><br>
+       <br>
+        <li><span style="color:#FFFFFF"><b>/msg botname rules bang on</b></span></li>
+        <li><span style="color:#FFFFFF"><b>/msg botname rules bang off</b></span></li>
+        <br>
+        Disabling bang will result in a different game experience with a reduced shop menu and functionality. This setting cannot be disabled unless !bef command set is enabled.<br>
+        Turning bang off disables the following commands: !bang, !reload, !rearm<br>
+        Turning bang off disables the following shop items: 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 17, 18, 23, 24<br>
+        Pre-config: ON<br>
+        <br>
+        <span style="color:#DD8800"><b>No befriending (!bef command set)</b></span><br>
+        <br>
+        <li><span style="color:#FFFFFF"><b>/msg botname rules bef on</b></span></li>
+        <li><span style="color:#FFFFFF"><b>/msg botname rules bef off</b></span></li>
+        <br>
+        Disabling bef will result in a different game experience with a recuded shop menu and functionality. This setting cannot be disabled unless !bang command set is enabled.<br>
+        Turning bef off disables the following commands: !bef, !bread<br>
+        Turning bef off disables the following shop items: 19, 20, 21<br>
+        Pre-config: ON
+        </ul>
+        <br>
+        <span style="color:#DD8800"><b>[Configuring Flood Control]</b></span><br>
+        <br>
+        Flood control settings are currently experimental. The flood control system is designed to reduce virtual load and CPU usage, while also preventing the bot from an excess flood on the IRC network.<br>
+        <br>
+        The maxducks and duckfear configuration settings can also be used to help fine tune flood control, by setting maxducks and duckfear to their recommended values. In general situations, this should trigger the ducks to flee just before the threshold of flood protection is reached, and puts
+        a limit on how many ducks can exists at one time, thereby reducing demand from users when ducks exist. CTCP events are also monitored under flood control, and have an increased sensativity based on original value. Certain commands like !shop and !duckstats will also trigger flood control quicker, because of their multi-message formats.<br>
+        <br>
+        <ul>
+        <li><span style="color:#FFFFFF"><b>/msg botname set flood off</b></span><br>
+        This disables the flood control. Not recommended.<br>
+        <br>
+        <li><span style="color:#FFFFFF"><b>/msg botname set flood X,Y</b></span><br>
+        X = number of commands (recommend 24)<br>
+        Y = number of seconds (recommend 25)<br>
+        Pre-config: 24,25</li>
+        <br>
+        </ul></ul>
+        <span style="color:#DD8800"><b>
+        <span style="font-size: 13pt">
+        <a name='bot-maint-and-reset'></a>
+        --------------------------------------------------------------<br>
+        3. Bot Maintenance and Reset Functions<br>
+        --------------------------------------------------------------<br>
+        </span>
+        </b></span>
+        <ul>
+        This bot is capable of doing a maintenance procedure on duckhunt.cnf that scans certain sections and key values for old expired time entries and removes them. As time goes on, some values that get set by players will
+        build up in duckhunt.cnf, caused by irregular or infrequent play by players. These functions allow the botmaster to reduce the amount of 'build-up' in duckhunt.cnf. These functions should be used carefully, and are
+        currently experimental.<br>
+        <br>
+         <span style="color:#DD8800"><b>[Auto Maintenance]</b></span><br>
+         <br>
+         <ul>
+         <li><span style="color:#FFFFFF"><b>/msg botname maint auto 0</b></span><br>
+         This will turn auto maintenance OFF.<br>
+         <br>
+         <li><span style="color:#FFFFFF"><b>/msg botname maint auto X</b></span><br>
+         This will turn auto maintenance ON to run every X hours. 12-72 only.<br></li>
+         <br>
+         Auto maintenance runs every 12-72 hours, per botmaster definition.<br>
+         Pre-config: 24<br>
+         </ul>
+         <br>
+         <span style="color:#DD8800"><b>[Performing Defined Maintenance]</b></span><br>
+         <br>
+         Defined maintenance functions are tasks that the botmaster can assign at any time, with the following commands.<br>
+         <br>
+         <ul>
+          <li><span style="color:#FFFFFF"><b>/msg botname maint do</b></span><br>
+          This performs the regular maintenance procedure (performed by auto maintenance)<br>
+          <br>
+          <li><span style="color:#FFFFFF"><b>/msg botname maint do user xp X</b></span><br>
+          This performs a trimming of the user data. Any player data with xp value lesser or equal to X is permanently deleted. It is not recommended to use this function frequently.<br>
+          <br>
+          <li><span style="color:#FFFFFF"><b>/msg botname maint do user level X</b></span><br>
+          This performs a trimming of the user data. Any player data with a level value lesser or eual to X is permanently deleted. It is not recommended to use this function frequently.<br>
+          <br>
+         </ul>
+          <span style="color:#DD8800"><b>[Bot Reset Functions]</b></span><br>
+          <br>
+          Certain aspects of game data can be reset, or restored with these commands.<br>
+          <br>
+          <ul>
+            <li><span style="color:#FFFFFF"><b>/msg botname reset default</b></span><br>
+            This completely resets the bot. It will not change input data (server, port, duckchan, botname, botpass, botmaster). This function WILL delete ALL player data and restore configuration settings to the pre-configured values.<br>
+            <br>
+            <li><span style="color:#FFFFFF"><b>/msg botname reset players</b></span><br>
+            Clear player data only.<br></li>
+            <br>
+            <li><span style="color:#FFFFFF"><b>/msg botname reset totalshot</b></span><br>
+            Clear total channel shots data only.<br></li>
+            <br>
+            <li><span style="color:#FFFFFF"><b>/msg botname reset dual</b></span><br>
+            Clear player data and total channel shots data.<br></li>
+          </ul>
+         </ul>
+        <span style="color:#DD8800"><b>
+        <span style="font-size: 13pt">
+        <a name='botmaster-admin-commands'></a>
+        --------------------------------------------------------------<br>
+        4. Botmaster and Admin Commands<br>
+        --------------------------------------------------------------<br>
+        </span>
+        </b></span>
+        This bot contains many commands that can be used by botmasters and admins to not only fine tune the bot for the channel, but also allows easier control of the bot.<br>
+        <br>
+        <ul>
+         <span style="color:#DD8800"><b>[Botmaster and Admin Joint Commands]</b></span><br>
+         <br>
+         These commands are accessible to botmasters and admins.<br>
+         <br>
+         <li>!duckhunt on/off<br>Turn DuckHunt ON or OFF</li>
+         <br>
+         <li>!spawnduck<br>Spawns a random duck in chat</li>
+         <br>
+         <li>!spawnduck golden<br>Spawns a golden duck in chat</li>
+         <br>
+         <li>!spawnduck normal<br>Spawns a normal duck in chat</li>
+         <br>
+         <li>!rearm<br>Rearm yourself</li>
+         <br>
+         <li>!rearm username<br>Rearm specified user</li>
+         <br>
+         <li>!rearm all<br>Return all confiscated guns</li>
+         <br>
+         <li>!flood<br>Flood control override</li>
+         <br>
+         <li>/msg botname duckstats<br>View your stats</li>
+         <br>
+         <li>/msg botname duckstats username<br>View another player's stats</li>
+         <br>
+         <li>/msg botname spawnduck<br>Spawns a random duck in chat</li>
+         <br>
+         <li>/msg botname spawnduck normal<br>Spawns a normal duck in chat</li>
+         <br>
+         <li>/msg botname spawnduck golden<br>Spawns a golden duck in chat</li>
+         <br>
+         <li>/msg botname add ignore username<br>Adds username to the ignore list</li>
+         <br>
+         <li>/msg botname del ignore username<br>Remove username from the ignore list</li>
+         <br>
+         <span style="color:#DD8800"><b>[Botmaster Commands]</b></span><br>
+         <br>
+         These commands are available to botmasters only.<br> This section also includes the <a href="duckhunt1-1-0-operators-guide.htm#configuration">configuration commands</a>, <a href="duckhunt1-1-0-operators-guide.htm#bot-maint-and-reset">maintenance and reset functions</a><br>
+         <br>
+         <li>!exit<br>Shut down the bot</li>
+         <br>
+         <li>/msg botname duckhunt on/off<br>Turn DuckHunt ON or OFF</li>
+         <br>
+         <li>/msg botname do<br>
+         This command sends raw IRC commands thru the bot.<br>
+         Example: /msg botname PRIVMSG #duckhunt :Hello everyone!<br>
+         </li>
+         <br>
+         <li>/msg botname add<br></li>
+         <li>/msg botname del<br></li>
+         <br>
+         <ul>
+         <li>/msg botname add admin username<br>Add username to admin list. Remove the user from other lists first.</li>
+         <br>
+         <li>/msg botname del admin username<br>Remove username from admin list.</li>
+         <br>
+         <li>/msg botname add botmaster username<br>Add username to botmaster list. Remove the user from other lists first.</li>
+         <br>
+         <li>/msg botname del botmaster username<br>Remove username from botmaster list. Cannot remove yourself, and there must always be 1 botmaster listed at all times.</li>
+         </ul>
+         <br>
+         <li>/msg botname rules - See <a href="duckhunt1-1-0-operators-guide.htm#configuration">Configuration</a> for more info on these commands.</li>
+         <br>
+         <ul>
+         <li>/msg botname rules infammo on/off<br>Turn infinite ammo ON or OFF. Users will have infinite bread loafs and/or ammo magazines.</li>
+         <br>
+         <li>/msg botname rules gunconf on/off<br>Turn gun confiscation ON or OFF.</li>
+         <br>
+         <li>/msg botname rules bang on/off<br>Turns !bang, !reload and other related functions ON or OFF.</li>
+         <br>
+         <li>/msg botname rules bef on/off<br>Turns !bef, !bread and other related functions ON or OFF.</li>
+         <br>
+         <li>/msg botname rules gunricochet 0-100<br> Setting to 0 disables bullet ricochets. 1-100 for the percentage of misses that will ricochet. (Recommend 5)</li>
+         <br>
+         <li>/msg botname rules thebushes 0-100<br> Setting to 0 disables searching in the bushes. 1-100 for the percentage of items found while searching the bushes after shooting a duck. (Recommend 15)</li>
+         <br>
+         </ul>
+         <li>/msg botname set - See <a href="duckhunt1-1-0-operators-guide.htm#configuration">Configuration</a> for more info on these commands.</li>
+         <br>
+         <ul>
+             <li>/msg botname set maxducks X<br>X = total number of ducks that can exist at one time. Recommend 3-6.</li>
+             <br>
+             <li>/msg botname set spawntime X<br>X = time in seconds between duck spawns. Recommend 900-1800 seconds (15-30 min)</li>
+             <br>
+             <li>/msg botname set flytime X<br>X = time in seconds until the spawned  duck flies away. Recommend 600-1500 seconds (10-25 min)</li>
+             <br>
+             <li>/msg botname set duckexp X<br>X = amount of xp earned for shooting/befriending a duck. Golden ducks are 3x this value. Recommend 15</li>
+             <br>
+             <li>/msg botname set duckfear X<br>X = 1-100, sets number of fear points to scare away ducks. Recommend 45-55</li>
+             <br>
+             <li>/msg botname set duckgold X<br>X = 1-100, percentage of randomly spawned ducks that will turn golden. Recommend 40-50</li>
+             <br>
+             <li>/msg botname set friendrate X<br>X = 1-100, percentage of luck/success when befriending ducks. Recommend 73</li>
+             <br>
+         </ul>
+         <br>
+         <li>/msg botname maint - See: <a href=duckhunt1-1-0-operators-guide.htm#bot-maint-and-reset>Bot Maintenance and Reset Functions</a> for more information on this command</li>
+         <br>
+         <ul>
+             <li>/msg botname maint auto 0<br>This turns auto maintenance OFF</li>
+             <br>
+             <li>/msg botname maint auto 12-72<br>Turns auto maintenance ON to run every 12-72 hours</li>
+             <br>
+             <li>/msg botname maint do<br>Performs the regular maintenance procedure.</li>
+             <br>
+             <li>/msg botname maint do user xp/level X<br>Deletes all player entries with xp or level less than or equal to X</li>
+         </ul>
+         <br>
+         <li>/msg botname reset - See: <a href=duckhunt1-1-0-operators-guide.htm#bot-maint-and-reset>Bot Maintenance and Reset Functions</a> for more information on this command</li>
+         <br>
+         <ul>
+             <li>/msg botname reset default<br>Restore bot settings to default, deletes all player data. Does not delete username, password, server, channel.</li>
+             <br>
+             <li>/msg botname reset players<br>Clears all player data</li>
+             <br>
+             <li>/msg botname reset totalshot<br>Clears the total shot data</li>
+             <br>
+             <li>/msg botname reset dual<br>Clears all player data and total shot data</li>
+         </ul>
+         <br>
+         <li>/msg botname set flood</li>
+         <br>
+         <ul>
+             <li>/msg botname set flood<br>Displays current flood settings</li>
+             <br>
+             <li>/msg botname set flood off<br>Turn off flood protection</li>
+             <br>
+             <li>/msg botname set flood on X,Y<br>Turn on flood prection to X commands in Y seconds. Recommend 24,25</li>
+         </ul>
+        </ul>
+        </ul>
+    </span>
+</p>
+</div>
+</span>
+</td></tr>
+</table>
+</span>
+</span>
+</body>
+
+</html>
