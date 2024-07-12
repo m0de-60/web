@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Mode60 - zCore Official Website
+    </title>
+<style type="text/css">
+.scroller {
+  width: 98%;
+  height: 96%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  padding: 10px;
+  border: 1px solid;
+
+}
+</style>
+<style type="text/css">
+.scroller2 {
+  width: 94%;
+  height: 96%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  padding: 10px;
+  border: 1px solid;
+
+}
+</style>
+<style>
+a:link {
+  color: #00CD88;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00CD88;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF789A;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #00CD88;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+<body style="background-color:#000000;">
+<span style="font-family: consolas">
+<span style="font-size: 11pt">
+<span style="color:#DDEEFF">
+    <table border=1 height="100%" width="100%" cellspacing="15">
+
+        <tr>
+            <th Width="20%">
+                <img src="https://m0de-60.github.io/web/mode-60-profile.png">
+            </th>
+            <th Width=60% >
+               <img src="https://m0de-60.github.io/web/zcore-logo-1.png" width="400" height="100">
+               <p align=center>User's Guide v0.1x+ (UNDER CONSTRUCTION)</p>
+            </th>
+            <th Width="20%">
+                <img src="https://m0de-60.github.io/web/paypal-logo.png" width="150" height="35"><br>
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="business" value="A4ZQUP23RUM8N" />
+<input type="hidden" name="no_recurring" value="0" />
+<input type="hidden" name="item_name" value="Mode60 Productions" />
+<input type="hidden" name="currency_code" value="USD" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+                Thank you for your support!<br><br>
+                <img src="https://m0de-60.github.io/web/ca-logo.png" width="160" height="45"><br>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <b>zCore Links:</b><br>
+                <ul>
+                    <li>Installation<br>
+                    <a href="zcore.htm#installation-linux">Linux Terminal</a><br>
+                    <a href="zcore.htm#installation-win-desktop">Desktop Windows/Mac/Linux</a><br>
+                    </li><br>
+                    <li>Configuration and Start Up<br>
+                    <a href="zcore.htm#main-configuration">Main Configuration</a><br>
+                    <a href="zcore.htm#startup-linux">Start Up Linux</a><br>
+                    <a href="zcore.htm#startup-win-desktop">Start Up Desktop Windows/Mac/Linux)</a>
+                    </li><br>
+                    <li>Core Features<br>
+                    <a href="zcore.htm#core-commands">Core IRC Commands</a><br>
+                    <a href="zcore.htm#system-commands">System IRC Commands</a><br>
+                    <a href="zcore.htm#multi-network">Setting up Multi-Network</a><br>
+                    <a href="zcore.htm#system-module">System Module</a><br>
+                    <a href="zcore.htm#plugin-modules">Plugin Modules</a><br>
+                    <a href="zcore.htm#plugin-scripting">Plugin Scripting</a><br>
+                    Core Troubleshooting *<br>
+                    System Troubleshooting *<br>
+                    Error Handling & Explanations *<br>
+                    </li>
+                </ul>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </td>
+
+            <td>
+                <div class="scroller">
+                <span style="font-family: consolas">
+                <span style="font-size: 14pt">
+                <span style="color:#DDEEFF">
+                <p align=center>
+                    <a name='installation-linux'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Installation: Linux Terminal</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                       This section covers installation of zCore thru a Linux Terminal using <b>git</b>. <a href="zcore.htm#installation-win-desktop">Click here</a> for the desktop version.<br>
+                       <ul>
+                        <li>Check that the machine's linux distribution has <a href="https://www.python.org/downloads/release/python-3120/">Python 3.12</a> installed as the primary.</li><br>
+                       <li>In your linux terminal input the following commands:<br><br>
+                       <b><span style="color:#BB5500">cd</span></b><br>
+                       or <span style="color:#BB5500">cd ./foldername</span> <br>whatever directory to want to place the zcore folder in<br>
+                       <br>
+                       <b><span style="color:#BB5500">sudo git clone https://github.com/m0de-60/zcore ./zcore</b></span> <br>
+                       </li>
+                       <br>
+                       <li>Enter password if prompted, screen will confirm when finished.</li><br>
+                       <li>Installation complete. Before starting up the bot, please proceed to <a href="zcore.htm#main-configuration">Main Configuration.</a></li><br>
+                       </ul>
+                </span>
+                <p align=center>
+                    <a name='installation-win-desktop'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Installation: Desktop Windows (Mac/Linux desktop)</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+
+                </p>
+                <span style="font-size: 12pt">
+                    This section covers the general installation of zCore on Windows and other desktop systems (Mac/Linux desktop). <a href="zcore.htm#installation-linux">Click here</a> for the Linux Terminal Version.<br>
+                    <ul>
+                        <li>Desktop machine must have <a href="https://www.python.org/downloads/release/python-3120/">Python 3.12</a> installed.</li>
+                        <br>
+                        <li><a href="https://github.com/m0de-60/zcore/archive/refs/heads/main.zip">Click here</a> to download the repository .zip file '<span style="color:#BB5500">zcore-main.zip</span>'</li>
+                        <br>
+                        <li>Open '<span style="color:#BB5500">zcore-main.zip</span>' and copy the folder '<span style="color:#BB5500">zcore-main</span>' to <span style="color:#BB5500">C:\zcore-main\</span>
+                        <br>Or the directory you wish. (<span style="color:#BB5500">Keep all files in zcore-main folder!</span>)</li>
+                        <br>
+                        <li>After you have copied the '<span style="color:#BB5500">zcore-main</span>' folder to where you want it, <b>rename it to '<span style="color:#BB5500">zcore</span>'</b></li><br>
+                        <li>Installation complete. Before starting up the bot, please proceed to Main Configuration.</li><br>
+                        </li>
+                    </ul>
+                </span>
+                <p align=center>
+                    <a name='main-configuration'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Main Configuration (All applications)</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    This section covers basic starting configuration of zCore, getting zCore set up after installation.<br>
+                    <br>
+                    <li><b>For all Linux Terminal, Windows and other desktop systems. (macOS, Linux Desktop)</b><br>
+                    <br>
+                    <ul>
+                        <li>Open or direct to the '<span style="color:#BB5500">zcore</span>' (<span style="color:#BB5500">zcore-main</span>) folder</li>
+                        <br>
+                        <li>In <span style="color:#BB5500">./zcore/ folder</span> locate and open '<span style="color:#BB5500">zcore.cnf</span>' with a text editor (NotePad, Nano, SimpleText)<br>
+                        <br>
+                        NOTE: <span style="color:#BB5500">Only input <b>lower case</b> text and numbers.</span> Crossed out items can be changed later.<br>
+                        <br>
+                        zcore.cnf Configuration Description:<br>
+                        <br>
+                        <ul>
+                            <br>
+                            [zcore]<br>
+                            <b>serverlist</b> = server1  <span style="color:#BB5500">---> One or more server names, separated by comma , no spaces</span><br>
+                            <b>botmaster</b> = yourname  <span style="color:#BB5500">---> Your username and trusted users for <b>full access</b>, seperated by comma, no spaces</span><br>
+                            <s>pingtime = 75<br>
+                            system = sys_zcore<br>
+                            plugins = 0</s><br><br>
+                            <li><b>serverlist</b> contains the name of the server, or list of servers that will be detailed below.<br>
+                            <span style="color:#BB5500">Single: <b>serverlist = server1</b><br>
+                            Multiple: <b>serverlist = server1,server2,etc</b></li></span>
+                            <br>
+                            <li>
+                                <b>botmaster</b> contains your username and other usernames you may use or trust with full IRC access to the bot.<br>
+                                <span style="color:#BB5500">Single: <b>botmaster = yourusername</b><br>
+                                Multiple: <b>botmaster = yourusername1,username2,etc</b></span>
+                            </li>
+                            <br>
+                            <li><span style="color:#DD0000">Do not alter any other values in [zcore] at this time.</span></li>
+                            <br>
+                            [server1]  <span style="color:#BB5500">---> This must match one of the server names in [zcore] serverlist</span><br>
+                            <b>serverid</b> = server1  <span style="color:#BB5500">---> This must match the above [server1] and match in [zcore] serverlist</span><br>
+                            <b>serveraddr</b> = irc.server.net  <span style="color:#BB5500">---> Text server address (or IP address)</span><br>
+                            <b>serverport</b> = 6667  <span style="color:#BB5500">---> 6667 for non SSL, 6697 for SSL (serverssl = yes)</span><br>
+                            <b>serverssl</b> = no  <span style="color:#BB5500">---> no for non SSL, yes for SSL (serverport = 6697)</span><br>
+                            <b>botname</b> = Bot_Name  <span style="color:#BB5500">---> Username for the bot. (Case sensative)</span><br>
+                            <b>botpass</b> = BotPassword <span style="color:#BB5500">---> Nickserv password for that server. (Case sensative)</span><br>
+                            <b>channels</b> = #channelname1 <span style="color:#BB5500">---> Channel(s) the bot will join and function, seperated by comma , no spaces.</span><br>
+                            <s>admin = 0</s><br>
+                            <s>access = 0</s><br>
+                            <s>akick = 0</s><br>
+                            <br>
+                            <li><span style="color:#DD0000">Copy this above format of [server1] and use it for each server you specified above in </span><span style="color:#BB5500">serverlist</span></li><br>
+                            <li><b>[server1]</b> This can be any name you give. Same with other servers you add to the list.</li><br>
+                            <li><b>serverid</b> This must match what is in the list brackets [server1].</li><br>
+                            <li><b>serveraddr</b> Text server address irc.network.com or IP address.</li><br>
+                            <li><b>serverport</b> 6667 for non-SSL, 6697 for SSL<br>
+                            <span style="color:#BB5500">non-SSL: <b>serverport = 6667</b><br>
+                            SSL: <b>serverport = 6697</b>
+                            </span>
+                            </li><br>
+                            <li><b>serverssl</b> if serverport = 6667, input no. If using SSL serverport = 6697, input yes<br>
+                            <span style="color:#BB5500">non-SSL: <b>serverssl = no</b><br>
+                            SSL: <b>serverssl = yes</b>
+                            </span></li>
+                            <br>
+                            <li><b>botname</b> The username for the bot on that server (case sensative)</li><br>
+                            <li><b>botpass</b> The nickserv password for the bot (case sensative), if no password input 0.<br>
+                            <span style="color:#BB5500">No Nickserv pass: <b>serverpass = 0</b><br>
+                            Nickserv pass: <b>serverpass = PassWord</b>
+                            </span></li>
+                            <br>
+                            <li><b>channels</b> This is the name of the channel, or list of channels for the bot to join and allow core functions<br>
+                            <span style="color:#BB5500">Single: <b>channels = #channel1</b><br>
+                            Multiple: channels = #channel1,#channel2,etc
+                            </span>
+                            </li>
+                        </ul>
+                        </li>
+                        <br>
+                        <li>When finished with <b>zcore.cnf</b> save the file and close it.</li>
+                        <br>
+                        <li>Basic starting configuration complete. Please proceed to Start Up.</li>
+                    </ul>
+                </span>
+                <p align=center><span style="font-size: 14pt">
+                    <a name='startup-linux'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Starting Up: Linux Terminal</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </span></p>
+                <span style="font-size: 12pt">
+                    <li>
+                        <b>Starting up from <span style="color:#BB5500">Linux Terminal</span></b><br>
+                        <ul>
+                        <li><span style="color:#BB5500">
+                        <b>screen<br></span></li>
+                        <li><span style="color:#BB5500">cd ./zcore</b></span> <br>
+                        Or have <b>cd</b> direct to whatever directory the zcore folder is in.</li>
+                        <li><span style="color:#BB5500"><b>sudo python3 zcore.py</b></span><br>
+                        Use <b>sudo</b>, with <b>python3</b> the bot needs permission to edit its own txt and cnf files.
+                        </li>
+                        <li><b><span style="color:#BB5500">Bot will confirm state on screen debug</span>, if there are any errors in the configuration data there will be errors in the core and/or modules.</b><br>
+                        <span style="color:#BB5500">If OK</span>, having used <b>screen</b> previously, you can now leave the bot running in the background.</li>
+                        <li>Press <span style="color:#BB5500"><b>ctrl a+d</b></span> this will leave the bot in the background and you can then exit the terminal or run other programs.</li>
+                        <br>
+                        <li><b>Return to Screen:</b><br>Use <span style="color:#BB5500"><b>screen -r</b></span> to return to or view the zCore screen debug.</li>
+                        </li>
+                        <br>
+                        <li>Refer to Core IRC Commands</li>
+                        </ul>
+                    </li>
+                    </span>
+                    <p align=center>
+                        <a name='startup-win-desktop'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Starting Up: Desktop Windows (Mac/Linux desktop)</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    <br>
+                    <li>
+                        <b>Starting up on <span style="color:#BB5500">Windows and other desktop systems</span> (Mac/Linux desktop)</b><br>
+                        <ul>
+                        <li>This section describes how to run zCore via a python's <span style="color:#BB5500"><b>Integrated Development</b> and <b>Learning Environment</b></span><br>
+                        <br>
+                        <span style="color:#BB5500">Python IDLE</span> is included in most python installations for windows and macos and is also included in many linux distributions.<br>
+                        <br>
+                        <b>If you do not have Python IDLE</b> any other program designed to run python modules should work in a similar fashion.</li>
+                        <br>
+                        <li><span style="color:#BB5500"><b>Open Python IDLE</b></span></li>
+                        <ul>
+                        <li>At the top drop down menus select <span style="color:#BB5500"><b>File > Open</b></span></li>
+                        <li>Locate and open the <span style="color:#BB5500"><b>zcore folder</b></span> and select the file '<span style="color:#BB5500"><b>zcore.py</b></span>'</li>
+                        <li>Click the <span style="color:#BB5500">open button</span></li>
+                        <li>A new window will open up containg zcore.py, <span style="color:#BB5500"><b>press F5</b></span> to run.<br>
+                        Or at the top drop down menus of the new window select <span style="color:#BB5500">Run > Run Module</span></li>
+                        <li>Back in the main python window <b><span style="color:#BB5500">the bot will confirm state on screen debug</span>, if there are any errors in the configuration data there will be errors in the core and/or modules.</b><br>
+                        <span style="color:#BB5500">If OK</span> you may close the second window containing zcore.py text and minimize the main IDLE window to your tray.</li>
+                        </ul>
+                        <li>Refer to Core IRC Commands</li>
+                        </ul>
+                    </li>
+                </span>
+                <p align=center>
+                    <a name='core-commands'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Core IRC Commands</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                <li>The <b>core irc commands</b> are built into zCore itself and allow botmasters to control zCore's main function.</li>
+                <li>Click here to view the zCore IRC System Commands</li>
+                <br>
+                <li>In Channel Commands<br>These commands are used in a IRC channel where zCore is running. (Botmaster)</li>
+                <ul>
+                    <li>!reboot or !restart<br>Restarts the bot</li>
+                    <li>!shutdown<br>Shuts down the bot</li>
+                </ul>
+                <li>PRIVMSG Commands<br>These commands use with /privmsg <botname> on any server where zCore is running. (Botmaster)</li>
+                <ul>
+                    <li>/privmsg botname stats</li>
+                    <li>/privmsg botname clear-err-log</li>
+                    <li>/privmsg botname save-err-log filename.txt</li>
+                    <li>/privmsg botname mount-p modulename</li>
+                    <li>/privmsg botname unmount-p modulename</li>
+                    <li>/privmsg botname mount-s modulename</li>
+                    <li>/privmsg botname unmount-s modulename</li>
+                </ul>
+                <li>CTCP Commands<br>These are what commands are available for /ctcp</li>
+                <ul>
+                    <li>/ctcp botname VERSION</li>
+                    <li>/ctcp botname FINGER</li>
+                    <li>/ctcp botname VID</li>
+                    <li>/ctcp botname CLIENTINFO</li>
+                </ul>
+                </span>
+                <p align=center>
+                    <a name='system-commands'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">zCore IRC System Commands</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    text here
+                </span>
+                <p align=center>
+                    <a name='multi-network'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Running zCore: Multi-Network</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    text here
+                </span>
+                <p align=center>
+                    <a name='system-module'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">zCore System Module</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    text here
+                </span>
+                <p align=center>
+                    <a name='plugin-modules'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">zCore Plugin Modules</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    text here
+                </span>
+                <p align=center>
+                    <a name='plugin-scripting'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">Scripting zCore Plugin Modules</span>
+                <br>
+                --------------------------------------------------------------------------</b>
+                </p>
+                <span style="font-size: 12pt">
+                    text here
+                </span>
+                <br>
+                <p align=center>
+                    <a name='about-zcore'></a>
+                <b>--------------------------------------------------------------------------
+                <br>
+                <span style="color:#BB2200">About zCore</span> <br>Multi-threaded asyncronous IRC core; a scriptable and modular software.
+                <br>
+                --------------------------------------------------------------------------</b>
+                <br>
+                </p>
+                <p align=left></p>
+                <span style="font-size: 12pt">
+                    zCore is a free and open source software, written in Python and can run on any Windows, Linux (or macOS) operating system with Python 3.12.0 installed.
+                    Out of the box zCore can connect to single or multiple IRC networks and channels that you specify in the configuration, and runs the zCore System Module that has basic IRC features and importable scripting functions for plugins.
+                    <br><br>
+                    zCore uses a multi-threaded and asyncronous processing structure that allows for multiple connections and features to run simultaneously.
+                    The core software alone does everything needed for IRC connection. If no system module or plugin(s) are used, zCore will connect, and stay connected to IRC networks, join channels, and idle.
+                    With the pre-installed zCore System Module, there are some basic built in channel operation commands (simple stuff like !op, !kick etc).
+                    The zCore System Module also features an access priviledge system that can also be used in scripting plugins.
+                    <br><br>
+                    The access system consists of 3 levels of access to the zCore system administration functions, Global Botmasters (Full access), Local Admins (Limited access), and Voice users (+v). There is also a auto kick/ban list.
+                    Any botmaster or admin listed receive +o (channel operator) when joining their accessed channels, and voice users receive +v on the channel.
+                    <br>
+                    <br>
+                    zCore features a scriptable plugin system that can load and run custom designed Python modules. zCore accepts two forms of python modules, one is called the system module and the other is a plugin module.
+                    The system module is a single universal supplement to the main core but can also be imported into plugin modules for scripting. These system modules handle the global attributes for all connection threads, such as userlist updating or administration access functions.
+                    The plugin modules are desgined to trigger on specified IRC events, such as JOIN, PART, PRIVMSG etc as a normal IRC bot/client would. The scriptable system will have documentation on how users can make their own plugin modules.
+                    <br>
+                    <br>
+                    Plugin modules are where users can really get creative. Along with some available plugins, users can also make their own plugins. The core software is capable of running one system module
+                    and multiple zCore plugins simultaneously, and can be configured to run certain plugins on certain channels, or all channels etc. Thru this scriptable and modular system you could run multiple
+                    IRC channel and network bots all on one platform effeciently, or host the same bot in multiple places without having to run extra shell processes. Also there will be a tutorial and coding guide
+                    for users who want to learn how to make plugins for this software.
+                    <br>
+                    <br>
+                    zCore is currently in development and planning to be released soon, date TBA. Here is a look at some (but not all) of the products that will be available for zCore:<br><br>
+                    <img src="https://m0de-60.github.io/web/trivia-master-logo.png" width="360" height="80"><br>
+                     1) Trivia-Master: An interactive text based trivia game for IRC channels. Will include a collection of trivia Q&As (from other credited sources) as well as a feature to allow for hosts to add custom Q&A, whether it be a single question or an entire Q&A set.<br><br>
+                     <img src="https://m0de-60.github.io/web/rpgenerator-new-logo-2.png" width="360" height="80"><br>
+                     2) RPGenerator: An extension of my RPGenerator products, this plugin will be an online RPG game hub that users can play via regular text clients or thru semi-graphical game clients that are also in development for windows and linux.<br><br>
+                     <img src="https://m0de-60.github.io/web/super-duckhunt-new-logo.png" width="360" height="80"><br>
+                     3) Super DuckHunt 2.0: This will be a recode and new version series of my stand-alone game bot Super DuckHunt. SDH 2.0 will be the next big update for the game, which will mark the end
+                     of Super DuckHunt 1.0 version series and instead be designed to run on zCore, expanding IRC DuckHunt to even highers levels of game experience. The 1.0 series will still be supported as there is a planned update to version 1.1.4 in the future.
+                </span>
+                </div>
+
+            </td>
+
+            <td>
+                       <p align=center>
+                           <img src="https://m0de-60.github.io/web/zcore-logo-1.png" width="200" height="50"><br>
+                           <ul>
+                           <li><span style="color:#BB5500"><b>Development Version:</b></span> 0.1x Ultra Beta</li><br>
+                           <li><span style="color:#BB5500"><b>Author/Developer:</b></span> Neo Nemesis/Mode60</li><br>
+                           <li><span style="color:#BB5500"><b>Status:</b></span> Unreleased</li><br>
+                           <li><span style="color:#BB5500"><b>Currently under development</b></span></li><br>
+                           <li><span style="color:#BB5500"><b>Future Release Version:</b></span> 0.10 Beta</li><br>
+                           <li><span style="color:#BB5500"><b>Release Date:</b></span> TBA</li>
+                           </ul>
+                       </p>
+                        <br><p align=center>Plugin Modules:</p>
+                        <img src="https://m0de-60.github.io/web/trivia-master-logo.png" width="360" height="80"><br>
+                        <ul>
+                            zCore Plugin Module
+                            <li><b>Version:</b> 1.00</li>
+                            <li><b>Developer:</b> Mode60</li>
+                            <li><b>Status:</b> Ultra Beta</li>
+                            <li><b>Release Version:</b> 1.01 Beta</li>
+                            <li><b>Release Date:</b> TBA</li>
+                        </ul>
+                         <br> <br> <br>
+                </span>
+            </td>
+        </tr>
+    </table>
+</span>
+</body>
+
+</html>
