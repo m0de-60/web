@@ -63,7 +63,7 @@ a:active {
 
         <tr>
             <th Width="20%">
-                <img src="https://m0de-60.github.io/web/mode-60-profile.png">
+                <a href="https://m0de-60.github.io/web"><img src="https://m0de-60.github.io/web/mode-60-profile.png"></a>
             </th>
             <th Width=60% >
                <img src="https://m0de-60.github.io/web/zcore-logo-1.png" width="400" height="100">
@@ -162,7 +162,7 @@ a:active {
                         <br>Or the directory you wish. (<span style="color:#BB5500">Keep all files in zcore-main folder!</span>)</li>
                         <br>
                         <li>After you have copied the '<span style="color:#BB5500">zcore-main</span>' folder to where you want it, <b>rename it to '<span style="color:#BB5500">zcore</span>'</b></li><br>
-                        <li>Installation complete. Before starting up the bot, please proceed to Main Configuration.</li><br>
+                        <li>Installation complete. Before starting up the bot, please proceed to <a href="zcore.htm#main-configuration">Main Configuration</a>.</li><br>
                         </li>
                     </ul>
                 </span>
@@ -206,8 +206,6 @@ a:active {
                                 Multiple: <b>botmaster = yourusername1,username2,etc</b></span>
                             </li>
                             <br>
-                            <li><span style="color:#DD0000">Do not alter any other values in [zcore] at this time.</span></li>
-                            <br>
                             [server1]  <span style="color:#BB5500">---> This must match one of the server names in [zcore] serverlist</span><br>
                             <b>serverid</b> = server1  <span style="color:#BB5500">---> This must match the above [server1] and match in [zcore] serverlist</span><br>
                             <b>serveraddr</b> = irc.server.net  <span style="color:#BB5500">---> Text server address (or IP address)</span><br>
@@ -245,12 +243,14 @@ a:active {
                             Multiple: channels = #channel1,#channel2,etc
                             </span>
                             </li>
+                            <br>
+                            <li><span style="color:#DD0000">Do not alter any other values in zcore.cnf at this time.</span></li>
                         </ul>
                         </li>
                         <br>
                         <li>When finished with <b>zcore.cnf</b> save the file and close it.</li>
                         <br>
-                        <li>Basic starting configuration complete. Please proceed to Start Up.</li>
+                        <li>Basic starting configuration complete. Please proceed to Start Up (<a href="zcore.htm#startup-linux"></a>Linux</a> or <a href="zcore.htm#startup-win-desktop">Win/Desktop</a>).</li>
                     </ul>
                 </span>
                 <p align=center><span style="font-size: 14pt">
@@ -279,7 +279,7 @@ a:active {
                         <li><b>Return to Screen:</b><br>Use <span style="color:#BB5500"><b>screen -r</b></span> to return to or view the zCore screen debug.</li>
                         </li>
                         <br>
-                        <li>Refer to Core IRC Commands</li>
+                        <li>Refer to <a href="zcore.htm#core-commands">Core IRC Commands</a></li>
                         </ul>
                     </li>
                     </span>
@@ -312,7 +312,7 @@ a:active {
                         <li>Back in the main python window <b><span style="color:#BB5500">the bot will confirm state on screen debug</span>, if there are any errors in the configuration data there will be errors in the core and/or modules.</b><br>
                         <span style="color:#BB5500">If OK</span> you may close the second window containing zcore.py text and minimize the main IDLE window to your tray.</li>
                         </ul>
-                        <li>Refer to Core IRC Commands</li>
+                        <li>Refer to <a href="zcore.htm#core-commands">Core IRC Commands</a></li>
                         </ul>
                     </li>
                 </span>
@@ -326,29 +326,57 @@ a:active {
                 </p>
                 <span style="font-size: 12pt">
                 <li>The <b>core irc commands</b> are built into zCore itself and allow botmasters to control zCore's main function.</li>
-                <li>Click here to view the zCore IRC System Commands</li>
+                <li><a href="zcore.htm#system-commands">Click here</a> to view the zCore IRC System Commands</li>
                 <br>
-                <li>In Channel Commands<br>These commands are used in a IRC channel where zCore is running. (Botmaster)</li>
+                <li><span style="color:#BB5500"><b>In Channel Commands</b></span><br>These commands are used in a IRC channel where zCore is running. (Botmaster)</li>
                 <ul>
-                    <li>!reboot or !restart<br>Restarts the bot</li>
-                    <li>!shutdown<br>Shuts down the bot</li>
+                    <li><span style="color:#BB5500"><b>!reboot</b></span> or <span style="color:#BB5500"><b>!restart</b></span><br>Restarts the bot</li><br>
+                    <li><span style="color:#BB5500"><b>!shutdown</b></span><br>Shuts down the bot. <br><b>It is recommended to always use !shutdown to turn off the bot.<br>Interrupting process may result in 'ghost errors' being stored in zcorelog.txt</b></li>
                 </ul>
-                <li>PRIVMSG Commands<br>These commands use with /privmsg <botname> on any server where zCore is running. (Botmaster)</li>
+                <li><span style="color:#BB5500"><b>PRIVMSG Commands</b></span><br>These commands used with <span style="color:#BB5500">/privmsg [botname]</span> on any server where zCore is running. (Botmaster)</li>
                 <ul>
-                    <li>/privmsg botname stats</li>
-                    <li>/privmsg botname clear-err-log</li>
-                    <li>/privmsg botname save-err-log filename.txt</li>
-                    <li>/privmsg botname mount-p modulename</li>
-                    <li>/privmsg botname unmount-p modulename</li>
-                    <li>/privmsg botname mount-s modulename</li>
-                    <li>/privmsg botname unmount-s modulename</li>
+                    <li><span style="color:#BB5500"><b>/privmsg botname stats</b></span><br>
+                    This returns a NOTICE from the bot giving a description of running conditions.<br>
+                    <br>
+                    <span style="color:#BB5500"><b>[NOTICE] -zCoreBot- [zcore] Version: 0.1x | vID: W1NGZ3R0 | Mode: run [Python version: 3.12.0] [OpenSSL 3.0.11]<br>
+                    [NOTICE] -zCoreBot- [Network Data] espernet Lag: 0.17 seconds | freenode Lag: 0.06 seconds</b></span></li><br>
+                    <li><span style="color:#BB5500"><b>/privmsg botname save-err-log filename.txt</b></span><br>
+                    This will save the current error & debug log file (zcorelog.txt) as anyfilename.txt to the ./zcore folder</li><br>
+                    <li><span style="color:#BB5500"><b>/privmsg botname clear-err-log</b></span><br>
+                    This will permanently clear the current error & debug log file (zcorelog.txt)</li><br>
+                    <li><span style="color:#BB5500"><b>/privmsg botname mount-p modulename</b></span><br>
+                    This will mount (or install) a plugin module, remotely. <b>modulename</b> must not contain .py at the end, and all of the plugin module files must be installed in the ./zcore folder before starting. Any plugin module loaded must be designed to work with zCore.<br>
+                    You can run multiple plugin modules at the same time.<br>
+                    <a href="zcore.htm#plugin-modules">Click here</a> for more information on plugin modules.
+                    <ul><li>Example: <span style="color:#BB5500"><b>/privmsg zcorebot mount-p duckhunt</b></span><br>
+                    Using this command, after installing the 'duckhunt' plugin module files in the ./zcore folder, zCore will then search for and install the plugin module.
+                    </li></ul><br>
+                    </li>
+                    <li><span style="color:#BB5500"><b>/privmsg botname unmount-p modulename</b></span><br>
+                    This will unmount (or remove) a plugin module, remotely. <b>modulename</b> must already be mounted in order to unmount.
+                    <a href="zcore.htm#plugin-modules">Click here</a> for more information on plugin modules.
+                    <ul><li>Example: <span style="color:#BB5500"><b>/privmsg zcorebot unmount-p duckhunt</b></span><br>
+                    Using this command <b>does not</b> remove the plugin module files from the ./zcore folder. It removes <b>modulename</b> from the internal module list until reinstalled. Any file removal, at this time, must be done manually.
+                    </li></ul><br>
+                    </li>
+                    <li><span style="color:#BB5500"><b>/privmsg botname mount-s modulename</b></span><br>
+                    This will mount (or install) <b>modulename</b> as a system module. Must not contain .py on the end, and all of the system module files must be installed in the ./zcore folder before starting. Any system module loaded must be designed to work with zCore.<br>
+                    You can only run one system module at a time.</li>
+                    <a href="zcore.htm#system-module">Click here</a> for more information on the system module.<br>
+                    <span style="color:#BB5500"><b>NOTE:</b></span> At this time it is not recommended to remove or alter the system module (sys_zcore.py)<br>
+                    <br>
+                    <li><span style="color:#BB5500"><b>/privmsg botname unmount-s modulename</b></span><br>
+                    This will unmount (or uninstall) <b>modulename</b> Using this command <b>does not</b> remove the system module files from the ./zcore folder. Do not remove system files from the ./zcore folder.<br>
+                    <a href="zcore.htm#system-module">Click here</a> for more information on the system module.<br>
+                    <span style="color:#BB5500"><b>NOTE:</b></span> At this time it is not recommended to remove or alter the system module (sys_zcore.py)<br>
+                    </li>
                 </ul>
-                <li>CTCP Commands<br>These are what commands are available for /ctcp</li>
+                <li><span style="color:#BB5500"><b>CTCP Commands</b></span><br>These are the basic CTCP commands</li>
                 <ul>
-                    <li>/ctcp botname VERSION</li>
-                    <li>/ctcp botname FINGER</li>
-                    <li>/ctcp botname VID</li>
-                    <li>/ctcp botname CLIENTINFO</li>
+                    <li><span style="color:#BB5500"><b>/ctcp botname VERSION</b></span></li><br>
+                    <li><span style="color:#BB5500"><b>/ctcp botname FINGER</b></span></li><br>
+                    <li><span style="color:#BB5500"><b>/ctcp botname VID</b></span></li><br>
+                    <li><span style="color:#BB5500"><b>/ctcp botname CLIENTINFO</b></span></li>
                 </ul>
                 </span>
                 <p align=center>
@@ -360,7 +388,43 @@ a:active {
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                    text here
+                    <li>The <b>zCore system commands</b> are contained in a system module. The current supplied system module is v1.0 '<span style="color:#BB5500"><b>sys_zcore.py</b></span>'</li>
+                    <br>
+                    <li><span style="color:#BB5500"><b>In Channel Commands</b></span><br>These commands are used in a IRC channel where zCore is running. (Botmaster & Admin)</li>
+                    <ul>
+                        The zCore bot needs +o or higher access on channel to use these commands<br>
+                        <br>
+                        <li><span style="color:#BB5500"><b>!op</b></span> or <span style="color:#BB5500"><b>!op username</b></span><br>
+                        Give you or username +o</li><br>
+                        <li><span style="color:#BB5500"><b>!deop</b></span> or <span style="color:#BB5500"><b>!deop username</b></span><br>
+                        Give you or username -o</li><br>
+                        <li><span style="color:#BB5500"><b>!voice</b></span> or <span style="color:#BB5500"><b>!voice username</b></span><br>
+                        Give you or username +v</li><br>
+                        <li><span style="color:#BB5500"><b>!devoice</b></span> or <span style="color:#BB5500"><b>!devoice username</b></span><br>
+                        Give you or username -v</li><br>
+                        <li><span style="color:#BB5500"><b>!kick username</b></span><br>
+                        Kick username from channel</li><br>
+                        <li><span style="color:#BB5500"><b>!ban username</b></span><br>
+                        Ban username in channel</li><br>
+                        <li><span style="color:#BB5500"><b>!kb username</b></span><br>
+                        Kick and ban username in channel</li><br>
+                        <li><span style="color:#BB5500"><b>!unban username/mask</b></span><br>
+                        Unban username or mask in channel</li><br>
+                        <li><span style="color:#BB5500"><b>!slap username</b></span><br>
+                        Slap username around a bit with a large trout</li><br>
+                    </ul>
+                    <li><span style="color:#BB5500"><b>PRIVMSG Commands</b></span><br>These commands used with <span style="color:#BB5500">/privmsg [botname]</span> on any server where zCore is running. (Botmaster)</li>
+                    <ul>
+                        Adding and Removing User Access<br>
+                        <a href="zcore.htm#system-module">Click here</a> for more information on the system module features.<br>
+                        <br>
+                        <li><span style="color:#BB5500"><b>/privmsg botname admin [add/rem] username</b></span><br>
+                        <b>Botmaster only</b> - Add or remove admin bot access for username</li><br>
+                        <li><span style="color:#BB5500"><b>/privmsg botname vcuser [add/rem] username</b></span><br>
+                        <b>Botmaster & Admin</b> - Add or remove voice +v access for username</li><br>
+                        <li><span style="color:#BB5500"><b>/privmsg botname akick [add/rem] username</b></span><br>
+                        <b>Botmaster & Admin</b> - Add or remove auto kick for username</li><br>
+                    </ul>
                 </span>
                 <p align=center>
                     <a name='multi-network'></a>
@@ -371,7 +435,7 @@ a:active {
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                    text here
+                    Please be patient, it's coming!
                 </span>
                 <p align=center>
                     <a name='system-module'></a>
@@ -382,7 +446,7 @@ a:active {
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                    text here
+                    Please be patient, it's coming!
                 </span>
                 <p align=center>
                     <a name='plugin-modules'></a>
@@ -393,7 +457,7 @@ a:active {
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                    text here
+                    Please be patient, it's coming!
                 </span>
                 <p align=center>
                     <a name='plugin-scripting'></a>
@@ -404,7 +468,7 @@ a:active {
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                    text here
+                    Please be patient, it's coming!
                 </span>
                 <br>
                 <p align=center>
@@ -458,11 +522,11 @@ a:active {
                        <p align=center>
                            <img src="https://m0de-60.github.io/web/zcore-logo-1.png" width="200" height="50"><br>
                            <ul>
-                           <li><span style="color:#BB5500"><b>Development Version:</b></span> 0.1x Ultra Beta</li><br>
+                           <li><span style="color:#BB5500"><b>Development Version:</b></span> 0.1x Pre-Beta</li><br>
                            <li><span style="color:#BB5500"><b>Author/Developer:</b></span> Neo Nemesis/Mode60</li><br>
-                           <li><span style="color:#BB5500"><b>Status:</b></span> Unreleased</li><br>
+                           <li><span style="color:#BB5500"><b>Status:</b></span> Testing</li><br>
                            <li><span style="color:#BB5500"><b>Currently under development</b></span></li><br>
-                           <li><span style="color:#BB5500"><b>Future Release Version:</b></span> 0.10 Beta</li><br>
+                           <li><span style="color:#BB5500"><b>Future Stable Version:</b></span> 0.10 Beta</li><br>
                            <li><span style="color:#BB5500"><b>Release Date:</b></span> TBA</li>
                            </ul>
                        </p>
