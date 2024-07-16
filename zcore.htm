@@ -320,15 +320,15 @@ a:active {
                     <a name='core-commands'></a>
                 <b>--------------------------------------------------------------------------
                 <br>
-                <span style="color:#BB2200">Core IRC Commands</span>
+                <span style="color:#BB2200">Core IRC Commands<br> Botmaster controls</span>
                 <br>
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                <li>The <b>core irc commands</b> are built into zCore itself and allow botmasters to control zCore's main function.</li>
+                <li>The <b>core irc commands</b> that are built into zCore itself allow users with botmaster access to use zCore's main functions.<br></li>
                 <li><a href="zcore.htm#system-commands">Click here</a> to view the zCore IRC System Commands</li>
                 <br>
-                <li><span style="color:#BB5500"><b>In Channel Commands</b></span><br>These commands are used in a IRC channel where zCore is running. (Botmaster)</li>
+                <li><span style="color:#BB5500"><b>In Channel Commands</b></span><br>These commands are used in a IRC channel where zCore is running.</li>
                 <ul>
                     <li><span style="color:#BB5500"><b>!reboot</b></span> or <span style="color:#BB5500"><b>!restart</b></span><br>Restarts the bot</li><br>
                     <li><span style="color:#BB5500"><b>!shutdown</b></span><br>Shuts down the bot. <br><b>It is recommended to always use !shutdown to turn off the bot.<br>Interrupting process may result in 'ghost errors' being stored in zcorelog.txt</b></li>
@@ -457,7 +457,20 @@ a:active {
                 --------------------------------------------------------------------------</b>
                 </p>
                 <span style="font-size: 12pt">
-                    Please be patient, it's coming!
+                <b>zCore can run multiple plugin modules at one time.</b> The total number of allowable plugin modules is still experimental. Would suggest no more than 3-4 plugins at this time.
+                Also make sure to read the intructions of each plugin as each plugin module will have its own configuration cnf file and instructions that are separate from the zCore instructions
+                and commands. Some plugin modules may conflict with one another. Plugin modules that are custom made by users and not made by Mode60 will have no support and
+                recommended to use at own risk.<br>
+                <ul>
+                <li>Download or git the plugin module source files and place the files in the zcore folder or directory with the other zcore files.</li>
+                <br>
+                <li>After the files have been installed properly, proceed with the plugin module instructions.</li>
+                <br>
+                <li>When finished with configuration, in your IRC terminal use:<br>/privmsg botname mount-p plugin_name</li>
+                <br>
+                <li>If all was done properly, the bot should confirm that the plugin was successfully mounted and will reboot.<br>NOTE: The bot will also describe any syntax or basic issues with
+                module mounting.</li>
+                </ul>
                 </span>
                 <p align=center>
                     <a name='plugin-scripting'></a>
